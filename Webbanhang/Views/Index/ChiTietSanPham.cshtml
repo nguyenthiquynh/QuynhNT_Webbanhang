@@ -1,0 +1,132 @@
+﻿@using Webbanhang.Models
+@{
+    Layout = "/Views/Index/Layout.cshtml";
+    ViewBag.Title = "ChiTietSanPham";
+    //List<DALDanhMucSanPham> ListDanhMucSanPham = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPham;
+    //List<DALDanhMucSanPham> ListDanhMucSanPhamCha = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPhamCha;
+    List<DALSanPham> List2 = (List<DALSanPham>)ViewBag.ListSanPham;
+    ViewBag.Title = "Thế giới máy tính";
+}
+
+<script src="/Script/Script/jquery.simpleGallery.min.js"></script>
+<script src="/Script/Script/jquery.simpleLens.min.js"></script>
+<link href="/Content/Css/jquery.simpleGallery.css" rel="stylesheet" />
+<link href="/Content/Css/jquery.simpleLens.css" rel="stylesheet" />
+
+<div class="contain">
+    <div class="chitietsanpham-left">
+        <p style="color: red; font-size: 20px; font-weight: bold;">Hình ảnh sản phẩm</p>
+        <article>
+            <h5>Demo with mouseenter - mouseleave</h5>
+            <div class="simpleLens-gallery-container" id="demo-1">
+                <div class="simpleLens-container">
+                    <div class="simpleLens-big-image-container">
+                        <a class="simpleLens-lens-image" data-lens-image="demo/large/benvado_elisa_bianco.jpg">
+                            <img src="/Picture/benvado_elisa_bianco1.jpg" style="width:180px; height:300px;" class="simpleLens-big-image">
+                        </a>
+                    </div>
+                </div>
+                <div class="simpleLens-thumbnails-container">
+                    <a href="#" class="simpleLens-thumbnail-wrapper"
+                       data-lens-image="/Picture/benvado_elisa_bianco2.jpg"
+                       data-big-image="/Picture/benvado_elisa_bianco1.jpg">
+                        <img src="/Picture/benvado_elisa_bianco.jpg">
+                    </a>
+                    <a href="#" class="simpleLens-thumbnail-wrapper"
+                       data-lens-image="/Picture/camper_21926_red2.jpg"
+                       data-big-image="/Picture/camper_21926_red1.jpg">
+                        <img src="/Picture/camper_21926_red.jpg">
+                    </a>
+                    <a href="#" class="simpleLens-thumbnail-wrapper"
+                       data-lens-image="/Picture/flylondon_most_red2.jpg"
+                       data-big-image="/Picture/flylondon_most_red1.jpg">
+                        <img src="/Picture/flylondon_most_red.jpg">
+                    </a>
+                </div>
+            </div>
+        </article>
+        <p style="width:100%">VGA ZOTAC GTX 960 2GB DDR5 128 bit</p>
+        <span>5.00000</span>
+        <p style="margin-top:10px;">(Giá đã bao gồm VAT)</p>
+    </div>
+    <div class="chitietsanpham-center">
+        <p style="color: red; font-size: 20px; font-weight: bold; text-align:center; ">Tên Sản Phẩm</p>
+        <p style="float:left;">Mã sản phẩm:1234</p>
+        <p style="float:right;">Lưu sản phẩm yêu thích</p>
+        <img style="width:20px; height:20px; float:right;" src="/Content/Images/download.png" />: <hr />
+        <div>
+            <p style="font-weight:bold; float:left;">Đánh Giá:</p>
+            <img style="width:15px; height:15px; float:left;" src="/Content/Images/Ngoisao.png" />
+            <img style="width:15px; height:15px; float:left;" src="/Content/Images/Ngoisao.png" />
+            <img style="width:15px; height:15px; float:left;" src="/Content/Images/Ngoisao.png" />
+            <img style="width:15px; height:15px; float:left;" src="/Content/Images/Ngoisao.png" />
+            <img style="width:15px; height:15px; float:left;" src="/Content/Images/Ngoisao.png" />
+            <p style="font-weight:bold; float:left; margin-left:60px;">Lượt xem:123456</p>
+        </div>
+        <table width="100%">
+            <tr>
+                <td style="vertical-align:top;">
+                    <b>Kho hàng: </b>
+                </td>
+                <td>
+                    <span>Đang còn hàng tại:</span>
+                    <br />
+
+                    <span style="color:red;">*129+131 Lê Thanh Nghị - HBT - Hà Nội <br /></span>
+
+                    <span style="color:red;">* 43 Thái Hà - Đống Đa - Hà Nội</span>
+                </td>
+            <tr>
+                <td width="110px">
+                    <b> Bảo Hành:</b>
+                </td>
+                <td>
+                    <span> 48 tháng</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <b>Giao hàng: </b> <br />
+                </td>
+                <td>
+                    <span style="color:red;"> - Miễn phí giao hàng (Trong bán kính 35 km) cho Miễn phí giao hàng (Trong bán kính 35 km) cho</span><br />
+                    <span style="color:red;">- Miễn phí giao hàng 300 km đối với khách hàng G</span> <br />
+                    <span style="color:red;">  - Nhận giao hàng và lắp đặt từ 8h00 - 20h30 các  </span> <br />
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <table width="100%">
+            <tr>
+                <td style="vertical-align:top;">
+                    <b>Tình trạng máy: </b>
+                </td>
+                <td>
+                    <span style="margin-right:200px;"> Mới 100%</span>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="box-right">
+        <p>adb</p>
+
+    </div>
+</div>
+
+    @*<div id="demo-1">
+        <div class="simpleLens-thumbnails-container">
+            <img src="/img/a.gif"/>
+        </div>
+    </div>*@
+<script>
+    $(document).ready(function () {
+        $('#demo-1 .simpleLens-thumbnails-container img').simpleGallery({
+            loading_image: '/Picture/loading.gif'
+        });
+
+        //$('#demo-1 .simpleLens-big-image').simpleLens({
+        //    loading_image: 'demo/images/loading.gif'
+        //});
+    });
+</script>

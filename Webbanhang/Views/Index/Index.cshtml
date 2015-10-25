@@ -1,0 +1,189 @@
+﻿@using Webbanhang.Models
+@{
+    Layout = "~/Views/Index/Layout.cshtml";
+    //List<DALDanhMucSanPham> ListDanhMucSanPham = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPham;
+    //List<DALDanhMucSanPham> ListDanhMucSanPhamCha = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPhamCha;
+    List<DALSanPham> List2 = (List<DALSanPham>)ViewBag.ListSanPham;
+    ViewBag.Title = "Thế giới máy tính";
+}
+<div class="contain">
+    @*<div class="box-left">
+        <p class="sub-box-left">Danh mục sản phẩm</p>
+        @foreach (DALDanhMucSanPham DMSPCha in ListDanhMucSanPhamCha)
+        {
+            <p class="sub-box-left sub-box-left-background">
+                <a href="@DMSPCha.DuongDanDanhMucSanPham" style="color:white;">@DMSPCha.TenDanhMucSanPham</a>
+            </p>
+            foreach (DALDanhMucSanPham DMSPCon in ListDanhMucSanPham.Where(i => int.Parse(i.ParentID) == DMSPCha.ID).ToList())
+            {
+                <ul>
+                    <li>
+                        <a href="@DMSPCon.DuongDanDanhMucSanPham">@DMSPCon.TenDanhMucSanPham</a>
+                    </li>
+                </ul>
+            }
+        }
+    </div>*@
+        @*<p class="sub-box-left sub-box-left-background">Linh kiện máy tính</p>
+            <ul>
+                <li>Bộ vi xử lý</li>
+                <li>Bo mạch chủ</li>
+                <li>Card màn hình</li>
+                <li>Bộ nhớ trong</li>
+                <li>Ổ đĩa cứng</li>
+                <li>Ổ đĩa quang</li>
+                <li>Nguồn máy tính</li>
+                <li>Vỏ máy tính</li>
+                <li>màn hình máy tính</li>
+            </ul>
+            <p class="sub-box-left sub-box-left-background"> Máy tính để bàn</p>
+            <ul>
+                <li>Máy tính để bàn VCOM</li>
+                <li>Máy tính để bàn IBM</li>
+                <li>Máy tính để bàn HP</li>
+                <li>Máy tính để bàn Fujitsu</li>
+            </ul>
+            <p class="sub-box-left sub-box-left-background">Máy tính xách tay</p>
+            <ul>
+                <li>Máy tính xách tay MSI </li>
+                <li>Máy tính xách tay HP </li>
+                <li>Máy tính xách tay Samsung </li>
+            </ul>*@
+    <div class="box-center">
+        <p class="sub-box-center">Sản phẩm nổi bật</p>
+        @foreach (DALSanPham SanPham in List2)
+        {
+            <div class="hinh">
+                <p class="tensanpham">
+                    @*<a href="@SanPham.DuongDanSanPham">*@
+                    @SanPham.TenSanPham
+                </p>
+                <div>
+                    <img src="@SanPham.LinkHinhAnh" class="img-rounded"> 
+                </div>
+                <span class="Gia">
+                    @SanPham.Gia
+                </span>
+                <p class="motangan">
+                    @SanPham.MoTaNgan
+                </p>
+                <button type="button" class="btn btn-primary">Chọn mua</button>
+            </div>
+        }
+        @*<div class="hinh">
+                <span class="hinh-chu"> CPU</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> HDD</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> Mainboard</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> Màn hình</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> hahf</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> kjsdhs</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> Giá: 900.000 VND</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>
+            <div class="hinh">
+                <span class="hinh-chu"> ảnh</span>
+                <div><img src="~/Content/Images/Capture.PNG"></div>
+                <span class="hinh-chu"> ảnh</span>
+                <button class="chonmua">Chọn mua</button>
+            </div>*@
+    </div>
+    <div class="box-right">
+        <div class="sub-box-right">
+            <p class="sub-box-left">Hỗ trợ trực tuyến</p>
+            <a href="ymsgr:SendIM?Nguyenthiquynh">
+                <img border="0" src="http://opi.yahoo.com/online?u=YOUR Yahoo ID&amp;m=g&amp;t=2">
+            </a>
+        </div>
+        @{
+            if (Session["Ten"] == null || Session["Ten"] == "") {         
+        <div class="sub-box-right">
+            <p class="sub-box-left">Thành viên</p>
+            <form method="post" id="FormDangNhap" onsubmit="return false;">
+                <p><input name="TenDangNhap" type="text" id="TenDangNhap" placeholder="Tên Đăng Nhập" value=""></p>
+                <p><input placeholder="Mật khẩu" type="password" id="MatKhau" name="Matkhau" value=""></p>
+                <input type="submit" onclick="return HayHay();" name=" dangnhap" value="Đăng nhập" id="DangNhap">
+            </form>
+        </div>
+            }
+            else { 
+        <div class="sub-box-right">
+            <p class="sub-box-left">Xin Chào</p>
+                <p class="sub-box-left-dangnhap">@Session["Ten"]</p>
+                
+                <a href="/Index/Thoat"><input type="button" name=" thoat" value="Thoát" id="Thoat"></a>
+        </div>
+        }
+        }
+
+
+        <div class="sub-box-right">
+            <p class="sub-box-left">Sản phẩm nổi bật</p>
+            <div class="hinh1">
+                <span class="hinh-chu"> ảnh</span>
+                <img src="~/Content/Images/Capture.PNG" style="width:200px; height:100px;">
+            </div>
+            <div class="hinh1">
+                <span class="hinh-chu"> ảnh</span>
+                <img src="~/Content/Images/Capture.PNG" style="width:200px; height:100px;">
+            </div>
+            <div class="hinh1">
+                <span class="hinh-chu"> ảnh</span>
+                <img src="~/Content/Images/Capture.PNG" style="width:200px; height:100px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>Bản quyền © 2014 thuộc về Phòng Đào tạo - Trường Đại học Sài Gòn.</p>
+    <p>Điện thoại: (08) 38.338.975 - 38.352.309</p>
+</div>
+
+<script>
+    function HayHay() {
+        $.ajax({
+            url: "/Index/XuLyDangNhap",
+            type: 'POST',
+            data: $("#FormDangNhap").serialize(),
+            success: function (data) {
+                $('#myModal').modal('hide');
+
+                if (data == 1) {
+                    alert('Đăng nhập thành công');
+                    location.reload();
+                    //window.location = 'https://www.google.com/';
+                }
+                else {
+                    alert('Có lỗi trong khi đăng nhập');
+                }
+            },
+        });
+        return false;
+    }
+
+</script>

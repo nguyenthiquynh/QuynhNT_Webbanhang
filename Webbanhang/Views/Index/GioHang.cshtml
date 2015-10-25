@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Index/Layout.cshtml";
+    ViewBag.Title = "GioHang";
+}
+
+<div class="contain">
+    <div class="giohang-left" >
+        <h3 style="margin-bottom: 15px; text-align:center;">Giỏ hàng của tôi</h3>
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    <b>1 sản phẩm</b>
+                </td>
+                <td width="180">
+                   <b> Giá</b>
+                </td>
+                <td>
+                    <b>Số lượng</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="~/Picture/Capture.PNG" class="img-giohang" style="margin-top:15px;">
+                </td>
+                <td style="margin-top:15px; valign=" top" width="250px">
+                    <p style="margin-left:30px;"> Tên Sản Phẩm</p>
+                    <p style="margin-left:30px;"> Mô Tả ngắn</p>
+                    <p style="margin-left:30px;"> Còn lại trong kho</p>
+                </td>
+                <td>
+                    <p>1200000  VND</p>
+                    <p> GIẢM GIÁ 10%</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="giohang-right">
+        <table>
+            <tr>
+                <h3>Thông tin đơn đặt hàng</h3>
+            </tr>
+            <hr />
+            <tr>
+                <td width="300px;">
+                    Tạm tính:
+                </td>
+                <td>
+                    1.20000VND
+                </td>
+            </tr>
+            <tr>
+                <td width="250px;">
+                    Phí vận chuyển
+                </td>
+                <td>
+                    1.20000VND
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-bottom: 1px solid yellow"></td>
+            </tr>
+            <tr>
+                <td width="250px;">
+                    Thành tiền
+                </td>
+                <td>
+                    1.20000VND
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button style="margin-top:10px; " type="button" class="btn btn-primary">Thanh toán</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

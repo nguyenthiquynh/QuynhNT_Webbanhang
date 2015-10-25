@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "~/Views/Index/Layout.cshtml";
+    ViewBag.Title = "DangKi";
+}
+
+
+<div style="width:50%;">
+    <h3 style="margin-left:180px; ">Đăng kí</h3>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="usr">Tên:</label>
+                </td>
+            </tr>
+            <tr style="width:400px;">
+                <td>
+                    
+                    <input style="width:190px;" placeholder="Họ" type="text" class="form-control" id="Ho">
+                </td>
+                <td>
+                    <input style="width:190px;" placeholder="Tên" type="text" class="form-control" id="Ten">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight: bold; margin-top: 20px;">Hãy chọn tên người dùng của bạn:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; example.com" type="text" class="form-control" id="Email">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight: bold; margin-top: 20px;">Mật khẩu:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" type="text" class="form-control" id="MatKhau">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight: bold; margin-top: 20px;">Xác nhận mật khẩu:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" type="text" class="form-control" id="XacNhanMatKhau">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight: bold; margin-top: 20px;">Ngày Sinh:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" type="date" name="NGAYSINH" id="NGAYSINH" data-date-format="DD MM YYYY" class="ngaysinh">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight: bold; width: 400px; margin-top: 20px;">Giới tính:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="gioitinh">
+                        <label><input type="radio" id="GIOITINHNAM" name="GIOITINH" value="Nam">Nam</label>
+                        <label><input style="margin-left:90px;" type="radio" id="GIOITINHNU" name="GIOITINH" value="Nữ">Nữ</label>
+                        <label><input style="margin-left:90px;" type="radio" id="GIOITINHKHAC" name="GIOITINH" value="Khac">Khác</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="font-weight: bold; margin-top: 20px;">Số điện thoại:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" type="text" class="form-control" id="SoDienThoai">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="font-weight:bold; margin-top:20px;">Địa chỉ email hiện tại:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input style="width:400px;" type="text" class="form-control" id="DCMail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button style="margin-top:10px; " type="button" class="btn btn-primary">Đăng kí</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+

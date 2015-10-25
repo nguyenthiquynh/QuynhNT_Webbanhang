@@ -1,0 +1,250 @@
+﻿@using Webbanhang.Models
+@{
+    Layout = null;
+    List<DALTHEGIOIMAYTINH> List = (List<DALTHEGIOIMAYTINH>)ViewBag.ListTHEGIOIMAYTINH;
+    List<DALDanhMucSanPham> ListDanhMucSanPham = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPham;
+    List<DALDanhMucSanPham> ListDanhMucSanPhamCha = (List<DALDanhMucSanPham>)ViewBag.ListDanhMucSanPhamCha;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Css/styles.css" rel="stylesheet" />
+    @*<script src="~/Script/Script/script.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .contain {
+            width: 100%;
+            float: left;
+        }
+
+        .box-left {
+            border: 1px solid black;
+            width: 20%;
+            float: left;
+            margin-right: 5px;
+            border-radius: 10px;
+        }
+
+        .box-center {
+            height: 600px;
+            width: 55%;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .box-right {
+            height: 600px;
+            width: 20%;
+            float: right;
+        }
+
+        .menu {
+            border: 2px solid;
+            background: gray;
+            color: white;
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .sub-menu {
+            float: left;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .sub-box-left {
+            border-radius: 10px;
+            background-color: #0099FF;
+            color: white;
+            text-align: center;
+        }
+
+        .sub-box-left-background {
+            background: #4740a7;
+        }
+
+        .sub-box-center {
+            border-radius: 3px;
+            background-color: #564a4a;
+            color: white;
+            text-align: center;
+        }
+
+        .sub-box-right {
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .hinh {
+            width: 140px;
+            height: 200px;
+            float: left;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+            .hinh img {
+                width: 40px;
+                text-align: center;
+            }
+
+        .motangan {
+            width: 100%;
+            float: left;
+        }
+        .tensanpham { 
+            width: 100%;
+            float: left;
+            font-weight:bold;
+        }
+         .chonmua {
+            width: 60%;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            padding-top:10px;
+            background-image: url('../Content/Images/bg-footer.png');
+            background-position: center top;
+            background-repeat: repeat-x;
+            height: 100px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            float: left;
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .logo img {
+            float: left;
+            width: 80px;
+        }
+        .Gia {
+            width: 100%;
+            float: left;
+            font-weight: bold;
+            color: red;
+        }
+        .sub-box-left-dangnhap {
+            color: red;
+            font-weight:bold;
+        }
+        .chitietsanpham-left {
+            width: 30%;
+            float: left;
+            margin-right: 5px;
+        }
+        .chitietsanpham-center {
+            height: 600px;
+            width: 45%;
+            float: left;
+            margin-left: 20px;
+        }
+        }
+        .hinhanhchitiet img {
+            width:350px;
+            height:250px;
+        }
+        .hinhanhsanpham {
+            width: 100px;
+            height: 80px;
+            float: left;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .dangki {
+            width: 60%;
+            margin-left: 200px;
+        }
+        .nhacnho {
+            margin: .5em 0 0;
+            display: block;
+            color:red;
+            line-height: 17px;
+        }
+        .ngaysinh {
+            display: block;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .gioitinh {
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:1px solid;
+        }
+        .giohang-left{
+            width:65%;
+            float:left;
+            height:100%;
+        }
+        .giohang-right {
+            width: 30%;
+            float: left;
+            margin-left: 20px;
+        }
+        .img-giohang{
+            width:120px;
+            height:120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="~/Content/Images/vai%20tro%20thiet%20ke%20logo%20dep%20thuong%20hieu%20microsoft.jpg" />
+            <p style="margin-left: 200px; font-size: 30px; margin-top: 10px; color: red; float: left;"> THẾ GIỚI MÁY TÍNH</p>
+            <button style="float:right; margin-top:20px; margin-left:10px;">Tìm kiếm</button>
+            <p><input placeholder="Tìm kiếm..." type="text" style="width:250px; float:right; margin-top:20px;" name="Timkiem" value=""></p>
+        </div>
+        <div class="menu">
+            @foreach (DALTHEGIOIMAYTINH Menu in List)
+            {
+                <div class="sub-menu">
+                    <a href="@Menu.DuongDanMenu" style="color:white;">@Menu.TenMenu</a>
+                </div>
+            }
+        </div>
+        <div class="box-left">
+            <p class="sub-box-left">Danh mục sản phẩm</p>
+            @foreach (DALDanhMucSanPham DMSPCha in ListDanhMucSanPhamCha)
+            {
+                <p class="sub-box-left sub-box-left-background">
+                    <a href="@DMSPCha.DuongDanDanhMucSanPham" style="color:white;">@DMSPCha.TenDanhMucSanPham</a>
+                </p>
+                foreach (DALDanhMucSanPham DMSPCon in ListDanhMucSanPham.Where(i => int.Parse(i.ParentID) == DMSPCha.ID).ToList())
+                {
+                    <ul>
+                        <li>
+                            <a href="@DMSPCon.DuongDanDanhMucSanPham">@DMSPCon.TenDanhMucSanPham</a>
+                        </li>
+                    </ul>
+                }
+            }
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>
