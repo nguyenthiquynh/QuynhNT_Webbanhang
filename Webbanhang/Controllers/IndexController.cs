@@ -61,7 +61,7 @@ namespace THEGIOIMAYTINH.Controllers
         }
         public void DanhMucSanPham()
         {
-            List<DALDanhMucSanPham> List1 = new List<DALDanhMucSanPham>();
+            List<DALDanhMucSanPham> ListDanhMucSanPham = new List<DALDanhMucSanPham>();
             
             SqlConnection conn = new SqlConnection(dbConnect.cnstring);
 
@@ -78,7 +78,7 @@ namespace THEGIOIMAYTINH.Controllers
                 while (rdr.Read())
                 {
                     DALDanhMucSanPham _DALDanhMucSanPham = new DALDanhMucSanPham(Int32.Parse(rdr["ID"].ToString()), rdr["ParentID"].ToString(), rdr["TenDanhMucSanPham"].ToString(), rdr["DuongDanDanhMucSanPham"].ToString(), (DateTime)rdr["NgayTao"], (DateTime)rdr["NgaySua"]);
-                    List1.Add(_DALDanhMucSanPham);
+                    ListDanhMucSanPham.Add(_DALDanhMucSanPham);
                 }
                 rdr.Close();   
             }
@@ -98,7 +98,8 @@ namespace THEGIOIMAYTINH.Controllers
                 }
             }
 
-            ViewBag.ListTHEGIOIMAYTINH = List1;
+            ViewBag.ListDanhMucSanPham = ListDanhMucSanPham;
+            ViewBag.ListDanhMucSanPhamCha = ListDanhMucSanPham.Where(i => i.ParentID == "").ToList();
         }
         public ActionResult Index()
         {           
@@ -192,7 +193,6 @@ namespace THEGIOIMAYTINH.Controllers
                     conn.Close();
                 }
             }
-            return -1; // Lỗi ko xác định
         }
         public ActionResult Thoat()
         {

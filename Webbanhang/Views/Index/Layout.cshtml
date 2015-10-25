@@ -155,7 +155,6 @@
             float: left;
             margin-left: 20px;
         }
-        }
         .hinhanhchitiet img {
             width:350px;
             height:250px;
@@ -234,7 +233,7 @@
                 <p class="sub-box-left sub-box-left-background">
                     <a href="@DMSPCha.DuongDanDanhMucSanPham" style="color:white;">@DMSPCha.TenDanhMucSanPham</a>
                 </p>
-                foreach (DALDanhMucSanPham DMSPCon in ListDanhMucSanPham.Where(i => int.Parse(i.ParentID) == DMSPCha.ID).ToList())
+                foreach (DALDanhMucSanPham DMSPCon in ListDanhMucSanPham.Where(i => i.ParentID == DMSPCha.ID.ToString()).ToList())
                 {
                     <ul>
                         <li>
